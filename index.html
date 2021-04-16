@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
+    <link rel="stylesheet" href="CSS/StyleHom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <title>UNREAL</title>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="index.html"><img src="Pictures/Logos/White.png" class="logo" alt="logo"></a>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME  </a><i class="fas fa-home" style="color: white;"></i></li>
+                    <li><a href="Apparel.html">APPAREL </a><i class="fas fa-tshirt" style="color: white;"></i></li>
+                    <li><a href="">LOGIN  </a><i class="fas fa-sign-in-alt" style="color: white;"></i></li>
+                    <li><a href="">REGISTER  </a><i class="fas fa-list-ul" style="color: white;"></i></li>
+                    <li><a href="">CART(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
+                </ul>
+            </nav>
+            <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+        </div>
+        <div class="content">
+            <h2>SPRING COLLECITON</h2>
+        </div>
+    </div>
+    <div class="social-networks">
+        <div class="s-container">
+            <div class="row">
+                <h3>MEET US</h3>
+                <div class="col-4">
+                    <img src="Pictures/Icons/Social-Net/Facebook.png">
+                </div>
+                <div class="col-4">
+                    <img src="Pictures/Icons/Social-Net/Twitter.png">
+                </div>
+                <div class="col-4">
+                    <img src="Pictures/Icons/Social-Net/google.png">
+                </div>
+                <div class="col-4">
+                    <img src="Pictures/Icons/Social-Net/Instagram.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brands">
+        <div class="s-container">
+            <div class="row">
+                <div class="col-5">
+                    <h3>Our Payment Methods</h3>
+                    <img src="Pictures/Icons/Brands.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px";
+            } else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+
+        var menuList2 = document.getElementById("menuList2");
+        menuList2.style.maxHeight = "0px";
+
+        function togglemenu2() {
+            if (menuList2.style.maxHeight == "0px") {
+                menuList2.style.maxHeight = "130px";
+            } else {
+                menuList2.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
