@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'marcellus_scregular';
+    src: url('../Fonts/marcellussc-regular-webfont.woff2') format('woff2'), url('../Fonts/marcellussc-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(19, 19, 19);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(80, 80, 80);
+    border-radius: 5px;
+}
+
+.wrapper {
+    width: auto;
+}
+
+header {
+    background-color: rgb(19, 19, 19);
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.info {
+    width: 100%;
+    font-size: 13px;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav1 {
+    flex: 1;
+    text-align: left;
+}
+
+#nav2 {
+    flex: 1;
+    text-align: right;
+}
+
+.info ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+}
+
+.info ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.banner {
+    box-sizing: border-box;
+}
+
+.logo1 {
+    width: 160px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+    background-color: rgb(19, 19, 19);
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+/*------------------------------------------  Imagen  -----------------------------------------------------------------*/
+
+.logo2 {
+    width: 80px;
+    cursor: pointer;
+}
+
+#img {
+    width: 100%;
+}
+
+.cont {
+    bottom: 100px;
+}
+
+.cont h2 {
+    font-family: "marcellus_scregular", smarcellus_scregular;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+
+/*------------------------------------------  contenido  --------------------------------------------------------------*/
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+.box {
+    width: 97%;
+    margin: 10px auto;
+    background-color: rgb(230, 230, 230);
+}
+
+.box hr {
+    width: 92%;
+    height: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: rgb(151, 151, 151);
+}
+
+.detail .col-2 {
+    padding: 20px;
+}
+
+.col-2 {
+    flex-basis: 40%;
+    min-width: 300px;
+    transition: background 0.5s;
+}
+
+.col-2 img {
+    max-width: 70%;
+    padding: 0px 0;
+}
+
+.text {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.t1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.t {
+    text-decoration: none;
+    color: black;
+}
+
+.col-2:hover {
+    border-radius: 10px;
+    background-color: #b8b8b8;
+}
+
+.img {
+    transition: transform 0.5s;
+}
+
+
+/*------------------------------------------  Footed  -----------------------------------------------------------------*/
+
+h3 {
+    margin-bottom: 20px;
+    color: rgb(80, 80, 80);
+}
+
+.s-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.social-networks {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    background-color: #fff;
+}
+
+.col-4 {
+    display: flex;
+    width: 50px;
+}
+
+.col-4 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.brands {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    text-align: center;
+}
+
+.col-5 {
+    display: inline-block;
+    width: 400px;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/*------------------------------------------  @media  -----------------------------------------------------------------*/
+
+@media only screen and (min-width:700px) {
+    header {
+        z-index: 12;
+        height: 140px;
+    }
+    .wrapper {
+        margin: 0 auto;
+    }
+    nav {
+        flex: 1;
+    }
+    .navbar ul li {
+        margin: 15px 15px;
+    }
+    .navbar ul li::after {
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #ffffff;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+    .navbar ul li:hover:after {
+        width: 100%;
+    }
+    .img:hover {
+        transform: translateY(-5px);
+    }
+    .col-4 img:hover {
+        transition: 0, 5s;
+        filter: grayscale(0);
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .text {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:390px) {
+    .info {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:318px) {
+    .info {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width:270px) {
+    .info {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (max-width:250px) {
+    .info {
+        font-size: 6px;
+    }
+}
+
+@media only screen and (min-width:700px) {
+    header {
+        z-index: 12;
+        height: 140px;
+    }
+    .wrapper {
+        margin: 0 auto;
+    }
+    nav {
+        flex: 1;
+    }
+    .navbar ul li::after {
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #ffffff;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+    .navbar ul li:hover:after {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .logo1 {
+        margin-top: 0;
+    }
+    nav {
+        text-align: left;
+    }
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar ul {
+        width: 50%;
+        position: absolute;
+        top: 93px;
+        text-align: right;
+        right: 0;
+        z-index: 2;
+        background: linear-gradient(rgba(19, 19, 19, 0.9), rgba(0, 0, 0, 0.55));
+    }
+    .navbar ul li {
+        display: block;
+        margin-top: 7.4px;
+        margin: 0 15px;
+    }
+    .navbar ul li a {
+        color: #fff;
+    }
+    .menu {
+        display: block;
+    }
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .row-2 h2 {
+        font-size: 20px;
+    }
+    .col-4 {
+        width: 35px;
+    }
+    .col-5 {
+        width: auto;
+    }
+    .t1 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:1080px) {
+    .col-2 .text {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
