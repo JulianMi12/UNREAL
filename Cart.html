@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
-    <link rel="stylesheet" href="CSS/StyleApparel.css">
+    <link rel="stylesheet" href="CSS/StyleCart.css">
     <link href="https//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
-    <title>Apparel</title>
+    <title>Meet Us</title>
 </head>
 
 <body>
@@ -49,49 +49,72 @@
         </div>
     </header>
 
-    <div id="img"><img src="Pictures/Backgrounds/Apparel.jpg" alt="" width="100%"></div>
+    <div id="img"><img src="Pictures/Backgrounds/cart.jpg" alt="" width="100%"></div>
     <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
+    <div class="c">
+        <div class="content">
+            <div class="box">
 
-    <div class="content">
-        <div class="box">
-            <div class="detail">
-                <div class="row">
-                    <hr>
-                    <div class="col-2 img">
-
-                        <a href="Semi-Informal.html" class="t"><img src="Pictures/Backgrounds/Apparel2.jpg" width="100%" id="ProductImg">
-                            <div class="text t1">
-                                <p>SEMI-INFORMAL</p>
+                <div class="cont">
+                    <div class="items">
+                        <p class="title">YOUR SELECTIONS</p>
+                        <hr>
+                        <div class="desc">
+                            <img src="ropa/Formal/CamizaBlancaRayas.jpg" class="imgc" width="100%">
+                            <div class="desc2">
+                                <p>White Striped Shirt</p><br>
+                                <small>Size: S</small><br>
+                                <input type="number" value="1" class="cant"><br>
+                                <small>Price: $22.99</small><br>
+                                <a href="" class="btn2">Remove</a>
                             </div>
-                            <div class="text">
-                                <p>CASUAL CLOTHES BUT WITHOUT LEAVING STYLE ASIDE</p>
+                        </div><br>
+                        <hr>
+                        <div class="desc">
+                            <img src="ropa/Formal/BlazerCafe.jpg" class="imgc">
+                            <div class="desc2">
+                                <p>Camel Blazer</p><br>
+                                <small>Size: S</small><br>
+                                <input type="number" value="1" class="cant"><br>
+                                <small>Price: $40.99</small><br>
+                                <a href="" class="btn2">Remove</a>
                             </div>
-                        </a>
+                        </div><br>
+                        <hr>
+                        <div class="desc">
+                            <img src="ropa/Semi-Informal/BowlingNegra.jpg" class="imgc">
+                            <div class="desc2">
+                                <p>Black Bowling Shirt</p><br>
+                                <small>Size: M</small><br>
+                                <input type="number" value="1" class="cant"><br>
+                                <small>Price: $24.99</small><br>
+                                <a href="" class="btn2">Remove</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2 img">
-
-                        <a href="Formal.html" class="t"><img src="Pictures/Backgrounds/Apparel12.jpg" width="100%" id="ProductImg">
-                            <div class="text t1">
-                                <p>FORMAL</p>
+                    <div class="t">
+                        <div class="summary">
+                            <h1>Order Summary</h1>
+                            <hr>
+                            <p>SubTotal: $88.97</p><br>
+                            <p>Deibery: $5.00</p><br>
+                            <p>Estimated Amount: $93.97</p>
+                            <div class="center">
+                                <button type="submit" class="btn">PAY</button>
                             </div>
-                            <div class="text">
-                                <p>ELEGANT CLOTHING TO HAVE THE BEST APPEARANCE</p>
-                            </div>
-                        </a>
+                        </div>
                     </div>
-                    <hr>
                 </div>
+                <hr>
             </div>
         </div>
     </div>
-
     <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
 
     <div class="social-networks">
         <div class="s-container">
             <h3>MEET US</h3>
             <div class="row">
-
                 <div class="col-4">
                     <img src="Pictures/Icons/Social-Net/Facebook.png">
                 </div>
@@ -130,8 +153,19 @@
             }
         }
     </script>
+    <script>
+        window.addEventListener('load', init, false);
 
-    <script src="JS/MeetUs.js"></script>
+        function init() {
+            let div1 = document.querySelector('#without');
+            let div2 = document.querySelector('#with');
+            if (true) {
+                div1.style.display = 'none';
+            } else {
+                div2.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
