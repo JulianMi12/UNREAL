@@ -6,117 +6,234 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
-    <link rel="stylesheet" href="CSS/StyleApparel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="CSS/StyleAppare.css">
     <link href="https//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <title>Apparel</title>
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="info">
-                <nav>
-                    <ul id="nav1">
-                        <li><a href="">Currency</a></li>
-                        <li><a href="">English</a></li>
-                        <li><a href="">(+57)3214553580</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <ul id="nav2">
-                        <li><a href="">Username</a></li>
-                        <li><i class="fas fa-search" style="color: white;"></i></li>
-                    </ul>
-                </nav>
-            </div>
+    <style>
+        .divOculto {
+            display: none;
+        }
+    </style>
 
-            <div class="banner">
-                <div class="navbar">
-                    <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
-                    <nav>
-                        <ul id="menuList">
-                            <li><a href="index.html">HOME  </a><i class="fas fa-home" style="color: white;"></i></li>
-                            <li><a href="Apparel.html">APPAREL  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
-                            <li><a href="MeetUs.html">MEET US  </a><i class="far fa-question-circle" style="color: white;"></i></li>
-                            <li><a href="">FAVORITES  </a><i class="far fa-heart" style="color: white;"></i></li>
-                            <li><a href="Cart.html">CART(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
-                        </ul>
-                    </nav>
-                    <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+    <div class="headd">
+        <div class="info">
+            <nav>
+                <ul id="nav1">
+                    <li><select name="selectCurr" id="inputCurr" class="form-control" required="required">
+                        <option value=''>Currency</option>
+                        <option value="1">Dollar</option>
+                        <option value="2">Colombian Peso</option>
+                    </select></li>
+                    <li><select name="selectLang" id="inputLang" class="form-control" required="required">
+                            <option value=''>Languaje</option>
+                            <option value="1">English</option>
+                            <option value="2">Spanish</option>
+                        </select></li>
+                    <li><a href="">(+57)3214553580</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul id="nav2">
+                    <li><a href="">Username</a></li>
+                    <li><i class="fas fa-search" style="color: white;"></i></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--######################################################################################### ENGLISH ##########################################################################-->
+
+    <div class="row divOcult" id="div1">
+        <header>
+            <div class="wrapper">
+                <div class="banner">
+                    <div class="navbar">
+                        <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
+                        <nav>
+                            <ul id="menuList">
+                                <li><a href="index.html">HOME  </a><i class="fas fa-home" style="color: white;"></i></li>
+                                <li><a href="Apparel.html">APPAREL  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
+                                <li><a href="MeetUs.html">MEET US  </a><i class="far fa-question-circle" style="color: white;"></i></li>
+                                <li><a href="">FAVORITES  </a><i class="far fa-heart" style="color: white;"></i></li>
+                                <li><a href="Cart.html">CART(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
+                            </ul>
+                        </nav>
+                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="img"><img src="Pictures/Backgrounds/Apparel.jpg" alt="" width="100%"></div>
+        <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
+
+        <div class="content">
+            <div class="box">
+                <div class="detail">
+                    <div class="row">
+                        <hr>
+                        <div class="col-2 img">
+
+                            <a href="Semi-Informal.html" class="t"><img src="Pictures/Backgrounds/Apparel2.jpg" width="100%" id="ProductImg">
+                                <div class="text t1">
+                                    <p>SEMI-INFORMAL</p>
+                                </div>
+                                <div class="text">
+                                    <p>CASUAL CLOTHES BUT WITHOUT LEAVING STYLE ASIDE</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-2 img">
+
+                            <a href="Formal.html" class="t"><img src="Pictures/Backgrounds/Apparel12.jpg" width="100%" id="ProductImg">
+                                <div class="text t1">
+                                    <p>FORMAL</p>
+                                </div>
+                                <div class="text">
+                                    <p>ELEGANT CLOTHING TO HAVE THE BEST APPEARANCE</p>
+                                </div>
+                            </a>
+                        </div>
+                        <hr>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
 
-    <div id="img"><img src="Pictures/Backgrounds/Apparel.jpg" alt="" width="100%"></div>
-    <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
+        <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
 
-    <div class="content">
-        <div class="box">
-            <div class="detail">
+        <div class="social-networks">
+            <div class="s-container">
+                <h3>MEET OUR SOCIAL NETWORKS</h3>
                 <div class="row">
-                    <hr>
-                    <div class="col-2 img">
 
-                        <a href="Semi-Informal.html" class="t"><img src="Pictures/Backgrounds/Apparel2.jpg" width="100%" id="ProductImg">
-                            <div class="text t1">
-                                <p>SEMI-INFORMAL</p>
-                            </div>
-                            <div class="text">
-                                <p>CASUAL CLOTHES BUT WITHOUT LEAVING STYLE ASIDE</p>
-                            </div>
-                        </a>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Facebook.png">
                     </div>
-                    <div class="col-2 img">
-
-                        <a href="Formal.html" class="t"><img src="Pictures/Backgrounds/Apparel12.jpg" width="100%" id="ProductImg">
-                            <div class="text t1">
-                                <p>FORMAL</p>
-                            </div>
-                            <div class="text">
-                                <p>ELEGANT CLOTHING TO HAVE THE BEST APPEARANCE</p>
-                            </div>
-                        </a>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Twitter.png">
                     </div>
-                    <hr>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/google.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Instagram.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brands">
+            <div class="s-container">
+                <div class="row">
+                    <div class="col-5">
+                        <h3>OUR PAYMENT METHODS</h3>
+                        <img src="Pictures/Icons/Brands.png">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
+    <!--######################################################################################### SPANISH ##########################################################################-->
 
-    <div class="social-networks">
-        <div class="s-container">
-            <h3>MEET US</h3>
-            <div class="row">
+    <div class="row divOculto" id="div2">
+        <header>
+            <div class="wrapper">
 
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Facebook.png">
+                <div class="banner">
+                    <div class="navbar">
+                        <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
+                        <nav>
+                            <ul id="menuList">
+                                <li><a href="index.html">MENU  </a><i class="fas fa-home" style="color: white;"></i></li>
+                                <li><a href="Apparel.html">ROPA  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
+                                <li><a href="MeetUs.html">CONOCENOS  </a><i class="far fa-question-circle" style="color: white;"></i></li>
+                                <li><a href="">FAVORITOS  </a><i class="far fa-heart" style="color: white;"></i></li>
+                                <li><a href="Cart.html">CARRITO(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
+                            </ul>
+                        </nav>
+                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+                    </div>
                 </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Twitter.png">
+            </div>
+        </header>
+
+        <div id="img"><img src="Pictures/Backgrounds/Apparel.jpg" alt="" width="100%"></div>
+        <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
+
+        <div class="content">
+            <div class="box">
+                <div class="detail">
+                    <div class="row">
+                        <hr>
+                        <div class="col-2 img">
+
+                            <a href="Semi-Informal.html" class="t"><img src="Pictures/Backgrounds/Apparel2.jpg" width="100%" id="ProductImg">
+                                <div class="text t1">
+                                    <p>SEMI-INFORMAL</p>
+                                </div>
+                                <div class="text">
+                                    <p>ROPA INFORMAL PERO SIN DEJAR DE LADO EL ESTILO</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-2 img">
+
+                            <a href="Formal.html" class="t"><img src="Pictures/Backgrounds/Apparel12.jpg" width="100%" id="ProductImg">
+                                <div class="text t1">
+                                    <p>FORMAL</p>
+                                </div>
+                                <div class="text">
+                                    <p>ROPA ELEGANTE PARA TENER LA MEJOR APARIENCIA</p>
+                                </div>
+                            </a>
+                        </div>
+                        <hr>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/google.png">
+            </div>
+        </div>
+
+        <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
+
+        <div class="social-networks">
+            <div class="s-container">
+                <h3>CONOCE NUESTRAS REDES SOCIALES</h3>
+                <div class="row">
+
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Facebook.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Twitter.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/google.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Instagram.png">
+                    </div>
                 </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Instagram.png">
+            </div>
+        </div>
+        <div class="brands">
+            <div class="s-container">
+                <div class="row">
+                    <div class="col-5">
+                        <h3>NUESTROS METODOS DE PAGO</h3>
+                        <img src="Pictures/Icons/Brands.png">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="brands">
-        <div class="s-container">
-            <div class="row">
-                <div class="col-5">
-                    <h3>Our Payment Methods</h3>
-                    <img src="Pictures/Icons/Brands.png">
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <script>
         var menuList = document.getElementById("menuList");
@@ -129,9 +246,29 @@
                 menuList.style.maxHeight = "0px";
             }
         }
-    </script>
 
-    <script src="JS/MeetUs.js"></script>
+        $(function() {
+
+            $("#inputLang").on('change', function() {
+
+                var selectValue = $(this).val();
+                switch (selectValue) {
+
+                    case "1":
+                        $("#div1").show();
+                        $("#div2").hide();
+                        break;
+
+                    case "2":
+                        $("#div1").hide();
+                        $("#div2").show();
+                        break;
+                }
+
+            }).change();
+
+        });
+    </script>
 </body>
 
 </html>
