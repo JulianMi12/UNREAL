@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb {
 .headd {
     background-color: rgb(19, 19, 19);
     width: 100%;
-    height: 5px;
+    height: 40px;
 }
 
 header {
@@ -321,7 +321,7 @@ h3 {
         z-index: 12;
         height: 140px;
     }
-    .headd {
+    .header {
         z-index: 12;
         height: 140px;
     }
@@ -347,12 +347,18 @@ h3 {
     .navbar ul li:hover:after {
         width: 100%;
     }
-    .prod:hover {
+    .img:hover {
         transform: translateY(-5px);
     }
     .col-4 img:hover {
         transition: 0, 5s;
         filter: grayscale(0);
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .text {
+        font-size: 12px;
     }
 }
 
@@ -385,7 +391,7 @@ h3 {
         z-index: 12;
         height: 140px;
     }
-    .headd {
+    .header {
         z-index: 12;
         height: 140px;
     }
@@ -449,6 +455,10 @@ h3 {
         overflow: hidden;
         transition: 0.5s;
     }
+    #menuList2 {
+        overflow: hidden;
+        transition: 0.5s;
+    }
     .row-2 h2 {
         font-size: 20px;
     }
@@ -457,5 +467,15 @@ h3 {
     }
     .col-5 {
         width: auto;
+    }
+    .t1 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:1080px) {
+    .col-2 .text {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }

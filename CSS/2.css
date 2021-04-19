@@ -168,52 +168,96 @@ nav ul li a {
     background-color: rgb(230, 230, 230);
 }
 
-.box hr {
+.hr1 {
     width: 92%;
     height: 4px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: inline-block;
-    background-color: rgb(151, 151, 151);
-}
-
-.detail .col-2 {
-    padding: 20px;
-}
-
-.col-2 {
-    flex-basis: 40%;
-    min-width: 300px;
-    transition: background 0.5s;
-}
-
-.col-2 img {
-    max-width: 70%;
-    padding: 0px 0;
-}
-
-.text {
-    margin-left: 60px;
-    margin-right: 60px;
-}
-
-.t1 {
-    font-size: 30px;
     margin-bottom: 10px;
+    display: inline-block;
+    background-color: rgb(170, 170, 170);
 }
 
-.t {
-    text-decoration: none;
-    color: black;
+.hr2 {
+    width: 92%;
+    height: 4px;
+    margin-bottom: 25px;
+    display: inline-block;
+    background-color: rgb(170, 170, 170);
 }
 
-.col-2:hover {
-    border-radius: 10px;
-    background-color: #b8b8b8;
+.row-2 {
+    display: flex;
+    margin: 1px auto 5px;
+    padding-top: 30px;
+    padding-bottom: 3px;
 }
 
-.img {
+.row-2 h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(133, 133, 133);
+}
+
+select {
+    border: none;
+    padding: 4px;
+    margin-left: 20px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.small-cont {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.small-cont h2 {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.prod {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
     transition: transform 0.5s;
+}
+
+.clothes {
+    width: 100%
+}
+
+.page-btn {
+    margin: 0 auto 15px;
+}
+
+.page-btn span {
+    display: inline-block;
+    border: 1px solid rgb(80, 80, 80);
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.page-btn span:hover {
+    background: #ff523b;
+    color: #fff;
 }
 
 
@@ -408,10 +452,6 @@ h3 {
         display: block;
     }
     #menuList {
-        overflow: hidden;
-        transition: 0.5s;
-    }
-    #menuList2 {
         overflow: hidden;
         transition: 0.5s;
     }

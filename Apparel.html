@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="CSS/2.css">
+    <link rel="stylesheet" href="CSS/StyleAppare.css">
     <link href="https//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <title>Apparel</title>
@@ -149,28 +149,6 @@
                     menuList.style.maxHeight = "0px";
                 }
             }
-
-            $(function() {
-
-                $("#inputLang").on('change', function() {
-
-                    var selectValue = $(this).val();
-                    switch (selectValue) {
-
-                        case "1":
-                            $("#div1").show();
-                            $("#div2").hide();
-                            break;
-
-                        case "2":
-                            $("#div1").hide();
-                            $("#div2").show();
-                            break;
-                    }
-
-                }).change();
-
-            });
         </script>
     </div>
 
@@ -277,33 +255,33 @@
                     menuList2.style.maxHeight = "0px";
                 }
             }
-
-            $(function() {
-
-                $("#inputLang").on('change', function() {
-
-                    var selectValue = $(this).val();
-                    switch (selectValue) {
-
-                        case "1":
-                            $("#div1").show();
-                            $("#div2").hide();
-                            break;
-
-                        case "2":
-                            $("#div1").hide();
-                            $("#div2").show();
-
-                            break;
-                    }
-
-                }).change();
-
-            });
         </script>
     </div>
 
+    <script>
+        $(function() {
 
+            $("#inputLang").on('change', function() {
+
+                var selectValue = $(this).val();
+                switch (selectValue) {
+
+                    case "1":
+                        $("#div1").show();
+                        $("#div2").hide();
+                        break;
+
+                    case "2":
+                        $("#div1").hide();
+                        $("#div2").show();
+
+                        break;
+                }
+
+            }).change();
+
+        });
+    </script>
 
 </body>
 
