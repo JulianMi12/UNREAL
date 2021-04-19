@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="CSS/StyleMeetUs.css">
     <link href="https//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
@@ -13,143 +15,338 @@
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="info">
-                <nav>
-                    <ul id="nav1">
-                        <li><a href="">Currency</a></li>
-                        <li><a href="">English</a></li>
-                        <li><a href="">(+57)3214553580</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <ul id="nav2">
-                        <li><a href="">Username</a></li>
-                        <li><i class="fas fa-search" style="color: white;"></i></li>
-                    </ul>
-                </nav>
-            </div>
+    <style>
+        .divOculto {
+            display: none;
+        }
+        
+        .money2 {
+            display: none;
+        }
+    </style>
 
-            <div class="banner">
-                <div class="navbar">
-                    <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
-                    <nav>
-                        <ul id="menuList">
-                            <li><a href="index.html">HOME  </a><i class="fas fa-home" style="color: white;"></i></li>
-                            <li><a href="Apparel.html">APPAREL  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
-                            <li><a href="MeetUs.html">MEET US  </a><i class="far fa-question-circle" style="color: white;"></i></li>
-                            <li><a href="">FAVORITES  </a><i class="far fa-heart" style="color: white;"></i></li>
-                            <li><a href="Cart.html">CART(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
-                        </ul>
-                    </nav>
-                    <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div id="img"><img src="Pictures/Backgrounds/MeetUs.jpg" alt="" width="100%"></div>
-    <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
-    <div class="c">
-        <div class="content">
-            <div class="box">
-                <hr>
-                <div class="detail">
-                    <div class="row">
-                        <div class="col-1">
-                            <img src="Pictures/Backgrounds/Conocenos2.jpg" width="100%">
-                        </div>
-                        <div class="col-2">
-                            <h1>Hello!</h1>
-                            <br>
-                            <p>We are an e-commerce dedicated to the manufacture and design of fresh, comfortable and timeless clothing totally made for those who want to dress well and with a great look for any occasion.</p>
-                            <br>
-                            <p>Although we are a fashion company, we are faithful believers that trends cannot define the way you dress. They only encourage you to wear clothes that even if you don't dislike them, are not how you like to dress, we believe
-                                that the best way to be fashionable is to dress the way you like and not the way they make you think you like.</p>
-                            <br>
-                            <h2>"WE MAKE CLOTHES WE LIKE"</h2>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!------------------------------------------------------ FORM --------------------------------------------------------------------------------->
-
-        <div class="body-form">
-            <form action="" id="form">
-                <div class="form">
-                    <h1>DO YOU HAVE SOMETHING TO TELL US?</h1>
-                    <div class="grupo">
-                        <input type="text" name="" id="name" required><span class="barra"></span>
-                        <label for="">Name</label>
-                    </div>
-                    <div class="grupo">
-                        <input type="text" name="" id="telefono" required><span class="barra"></span>
-                        <label for="">Phone</label>
-                    </div>
-                    <div class="grupo">
-                        <input type="email" name="" id="email" required><span class="barra"></span>
-                        <label for="">Email</label>
-                    </div>
-                    <div class="grupo">
-                        <h2 class="desc">Description</h2>
-                        <textarea name="" id="desc"></textarea>
-                    </div>
-                    <button type="submit" class="btn">SUBMIT</button>
-                </div>
-            </form>
-        </div>
-        <hr>
-    </div>
-    <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
-
-    <div class="social-networks">
-        <div class="s-container">
-            <h3>MEET US</h3>
-            <div class="row">
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Facebook.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Twitter.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/google.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Instagram.png">
-                </div>
-            </div>
+    <div class="headd">
+        <div class="info">
+            <nav>
+                <ul id="nav1">
+                    <li><select name="selectCurr" id="inputCurr" class="form-control" required="required">
+                        <option value=''>Currency</option>
+                        <option value="1">Dollar</option>
+                        <option value="2">Colombian Peso</option>
+                    </select></li>
+                    <li><select name="selectLang" id="inputLang" class="form-control" required="required">
+                            <option value=''>Languaje</option>
+                            <option value="1">English</option>
+                            <option value="2">Spanish</option>
+                        </select></li>
+                    <li><a href="">(+57)3214553580</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul id="nav2">
+                    <li><a href="">Username</a></li>
+                    <li><i class="fas fa-search" style="color: white;"></i></li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div class="brands">
-        <div class="s-container">
-            <div class="row">
-                <div class="col-5">
-                    <h3>Our Payment Methods</h3>
-                    <img src="Pictures/Icons/Brands.png">
+
+    <!--######################################################################################### ENGLISH ##########################################################################-->
+
+    <div class="row divOcult" id="div1">
+        <header>
+            <div class="wrapper">
+                <div class="banner">
+                    <div class="navbar">
+                        <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
+                        <nav>
+                            <ul id="menuList">
+                                <li><a href="index.html">HOME  </a><i class="fas fa-home" style="color: white;"></i></li>
+                                <li><a href="Apparel.html">APPAREL  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
+                                <li><a href="MeetUs.html">MEET US  </a><i class="far fa-question-circle" style="color: white;"></i></li>
+                                <li><a href="">FAVORITES  </a><i class="far fa-heart" style="color: white;"></i></li>
+                                <li><a href="Cart.html">CART(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
+                            </ul>
+                        </nav>
+                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="img"><img src="Pictures/Backgrounds/Semi-Informal.jpg" alt="" width="100%"></div>
+
+        <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
+        <div class="c">
+            <div class="content">
+                <div class="box">
+                    <hr>
+                    <div class="detail">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="Pictures/Backgrounds/Conocenos2.jpg" width="100%">
+                            </div>
+                            <div class="col-2">
+                                <h1>Hello!</h1>
+                                <br>
+                                <p>We are an e-commerce dedicated to the manufacture and design of fresh, comfortable and timeless clothing totally made for those who want to dress well and with a great look for any occasion.</p>
+                                <br>
+                                <p>Although we are a fashion company, we are faithful believers that trends cannot define the way you dress. They only encourage you to wear clothes that even if you don't dislike them, are not how you like to dress, we believe
+                                    that the best way to be fashionable is to dress the way you like and not the way they make you think you like.</p>
+                                <br>
+                                <h2>"WE MAKE CLOTHES WE LIKE"</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+            <!------------------------------------------------------ FORM --------------------------------------------------------------------------------->
+
+            <div class="body-form">
+                <form action="" id="form">
+                    <div class="form">
+                        <h1>DO YOU HAVE SOMETHING TO TELL US?</h1>
+                        <div class="grupo">
+                            <input type="text" name="" id="name" required><span class="barra"></span>
+                            <label for="">Name</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="text" name="" id="telefono" required><span class="barra"></span>
+                            <label for="">Phone</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="email" name="" id="email" required><span class="barra"></span>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="grupo">
+                            <h2 class="desc">Description</h2>
+                            <textarea name="" id="desc"></textarea>
+                        </div>
+                        <button type="submit" class="btn">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+            <hr>
+        </div>
+        <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
+
+        <div class="social-networks">
+            <div class="s-container">
+                <h3>MEET US</h3>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Facebook.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Twitter.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/google.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Instagram.png">
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="brands">
+            <div class="s-container">
+                <div class="row">
+                    <div class="col-5">
+                        <h3>Our Payment Methods</h3>
+                        <img src="Pictures/Icons/Brands.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "130px";
+                } else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+    </div>
+
+    <!--######################################################################################### SPANISH ##########################################################################-->
+    <div class="row divOculto" id="div2">
+        <header>
+            <div class="wrapper">
+                <div class="banner">
+                    <div class="navbar">
+                        <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
+                        <nav>
+                            <ul id="menuList2">
+                                <li><a href="index.html">MENU  </a><i class="fas fa-home" style="color: white;"></i></li>
+                                <li><a href="Apparel.html">ROPA  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
+                                <li><a href="MeetUs.html">CONOCENOS  </a><i class="far fa-question-circle" style="color: white;"></i></li>
+                                <li><a href="">FAVORITOS  </a><i class="far fa-heart" style="color: white;"></i></li>
+                                <li><a href="Cart.html">CARRITO(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
+                            </ul>
+                        </nav>
+                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu2()">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="img"><img src="Pictures/Backgrounds/Semi-Informal.jpg" alt="" width="100%"></div>
+
+        <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
+
+        <div class="c">
+            <div class="content">
+                <div class="box">
+                    <hr>
+                    <div class="detail">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="Pictures/Backgrounds/Conocenos2.jpg" width="100%">
+                            </div>
+                            <div class="col-2">
+                                <h1>¡HOLA!</h1>
+                                <br>
+                                <p>Somos un e-commerce dedicado a la fabricación y diseño de ropa fresca, cómoda y atemporal totalmente hecha para aquellos que quieran vestir bien y con un gran look para cualquier ocasión.</p>
+                                <br>
+                                <p>Aunque somos una empresa de moda, somos fieles creyentes de que las tendencias no pueden definir tu forma de vestir. Sólo te incitan a llevar prendas que aunque no te disgustan, no son como te gusta vestir, creemos que
+                                    la mejor manera de estar a la moda es vestir como a ti te gusta y no como te hacen creer que te gusta.</p>
+                                <br>
+                                <h2>"HACEMOS ROPA QUE NOS GUSTA"</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+            <!------------------------------------------------------ FORM --------------------------------------------------------------------------------->
+
+            <div class="body-form">
+                <form action="" id="form">
+                    <div class="form">
+                        <h1>¿TIENES ALGO QUE DECIRNOS?</h1>
+                        <div class="grupo">
+                            <input type="text" name="" id="name" required><span class="barra"></span>
+                            <label for="">Nombre</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="text" name="" id="telefono" required><span class="barra"></span>
+                            <label for="">Telefono</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="email" name="" id="email" required><span class="barra"></span>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="grupo">
+                            <h2 class="desc">Descripción</h2>
+                            <textarea name="" id="desc"></textarea>
+                        </div>
+                        <button type="submit" class="btn">ENVIAR</button>
+                    </div>
+                </form>
+            </div>
+            <hr>
+        </div>
+        <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
+
+        <div class="social-networks">
+            <div class="s-container">
+                <h3>CONOCENOS</h3>
+                <div class="row">
+
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Facebook.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Twitter.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/google.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Instagram.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brands">
+            <div class="s-container">
+                <div class="row">
+                    <div class="col-5">
+                        <h3>NUESTROS METODOS DE PAGO</h3>
+                        <img src="Pictures/Icons/Brands.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var menuList2 = document.getElementById("menuList2");
+            menuList2.style.maxHeight = "0px";
+
+            function togglemenu2() {
+                if (menuList2.style.maxHeight == "0px") {
+                    menuList2.style.maxHeight = "130px";
+                } else {
+                    menuList2.style.maxHeight = "0px";
+                }
+            }
+        </script>
     </div>
 
     <script>
-        var menuList = document.getElementById("menuList");
-        menuList.style.maxHeight = "0px";
+        $(function curr() {
 
-        function togglemenu() {
-            if (menuList.style.maxHeight == "0px") {
-                menuList.style.maxHeight = "130px";
-            } else {
-                menuList.style.maxHeight = "0px";
-            }
-        }
+            $("#inputCurr").on('change', function() {
+
+                var selectValue = $(this).val();
+                switch (selectValue) {
+
+                    case "1":
+                        $(".m1").show();
+                        $(".m2").hide();
+                        break;
+
+                    case "2":
+                        $(".m1").hide();
+                        $(".m2").show();
+                        break;
+                }
+
+            }).change();
+
+        });
+
+        $(function lang() {
+
+            $("#inputLang").on('change', function() {
+
+                var selectValue = $(this).val();
+                switch (selectValue) {
+
+                    case "1":
+                        $("#div1").show();
+                        $("#div2").hide();
+                        break;
+
+                    case "2":
+                        $("#div1").hide();
+                        $("#div2").show();
+                        break;
+                }
+
+            }).change();
+
+        });
     </script>
-
-    <script src="JS/MeetUs.js"></script>
 </body>
 
 </html>

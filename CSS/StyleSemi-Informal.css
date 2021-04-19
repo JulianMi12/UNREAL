@@ -157,6 +157,12 @@ nav ul li a {
 
 /*------------------------------------------  contenido  --------------------------------------------------------------*/
 
+.c {
+    width: 97%;
+    margin: 10px auto;
+    background-color: rgb(230, 230, 230);
+}
+
 .content {
     width: 100%;
     text-align: center;
@@ -168,96 +174,122 @@ nav ul li a {
     background-color: rgb(230, 230, 230);
 }
 
-.hr1 {
+.box hr {
     width: 92%;
     height: 4px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: inline-block;
     background-color: rgb(170, 170, 170);
 }
 
-.hr2 {
-    width: 92%;
-    height: 4px;
-    margin-bottom: 25px;
-    display: inline-block;
-    background-color: rgb(170, 170, 170);
-}
-
-.row-2 {
-    display: flex;
-    margin: 1px auto 5px;
-    padding-top: 30px;
-    padding-bottom: 3px;
-}
-
-.row-2 h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(133, 133, 133);
-}
-
-select {
-    border: none;
-    padding: 4px;
-    margin-left: 20px;
-}
-
-select:focus {
-    outline: none;
-}
-
-.small-cont {
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.small-cont h2 {
-    text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    line-height: 60px;
-    color: #555;
-}
-
-.row {
+.cont {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: 92%;
 }
 
-.prod {
-    flex-basis: 25%;
-    padding: 10px;
-    min-width: 200px;
-    margin-bottom: 50px;
-    transition: transform 0.5s;
+.desc {
+    display: flex;
+    padding-left: 5.5%;
+    text-align: left;
 }
 
-.clothes {
-    width: 100%
+.desc2 .cant {
+    font-size: 15px;
+    width: 35px;
 }
 
-.page-btn {
-    margin: 0 auto 15px;
+.desc2 {
+    padding-left: 2%;
+    font-size: 25px;
 }
 
-.page-btn span {
+.items .title {
+    text-align: left;
+    margin-top: 3%;
+    margin-left: 6%;
+    font-family: "marcellus_scregular", smarcellus_scregular;
+    font-size: 30px;
+    color: rgb(105, 105, 105);
+}
+
+.items hr {
+    width: 89%;
+}
+
+.items img {
+    width: 20%;
+    height: 20%;
+}
+
+.t {
+    width: 30%;
+    height: 50%;
+}
+
+.summary {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.summary hr {
+    height: 3.8px;
     display: inline-block;
-    border: 1px solid rgb(80, 80, 80);
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
+    background-color: #ff523b;
+    width: 92%;
+    align-items: center;
 }
 
-.page-btn span:hover {
+.summary h1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: -6px;
+}
+
+.btn {
+    font-size: 18px;
+    display: inline-block;
     background: #ff523b;
+    text-decoration: none;
     color: #fff;
+    padding: 10px 70px;
+    margin: 25px 0;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #774242;
+}
+
+div.center {
+    text-align: center;
+}
+
+.btn2 {
+    font-size: 18px;
+    display: inline-block;
+    background: #ff523b;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 20px;
+    margin: 20px 0;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.btn2:hover {
+    background: #774242;
 }
 
 
@@ -321,10 +353,6 @@ h3 {
         z-index: 12;
         height: 140px;
     }
-    .header {
-        z-index: 12;
-        height: 140px;
-    }
     .wrapper {
         margin: 0 auto;
     }
@@ -347,7 +375,7 @@ h3 {
     .navbar ul li:hover:after {
         width: 100%;
     }
-    .img:hover {
+    .prod:hover {
         transform: translateY(-5px);
     }
     .col-4 img:hover {
@@ -356,9 +384,9 @@ h3 {
     }
 }
 
-@media only screen and (max-width:400px) {
-    .text {
-        font-size: 12px;
+@media only screen and (max-width:390px) {
+    .form h1 {
+        font-size: 15px;
     }
 }
 
@@ -388,10 +416,6 @@ h3 {
 
 @media only screen and (min-width:700px) {
     header {
-        z-index: 12;
-        height: 140px;
-    }
-    .header {
         z-index: 12;
         height: 140px;
     }
@@ -468,14 +492,26 @@ h3 {
     .col-5 {
         width: auto;
     }
-    .t1 {
-        font-size: 20px;
+    form {
+        width: 80%;
+    }
+    .cart-info {
+        font-size: 15px;
+    }
+    .cart-info p {
+        display: none;
+    }
+    td img {
+        width: 100px;
+        height: 100px;
     }
 }
 
-@media only screen and (max-width:1080px) {
-    .col-2 .text {
-        margin-left: 50px;
-        margin-right: 50px;
+@media only screen and (max-width:950px) {
+    .related {
+        font-size: calc(1em + 1vw);
+    }
+    .related2 {
+        font-size: calc(0.8em + 0.8vw);
     }
 }

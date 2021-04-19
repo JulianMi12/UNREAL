@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="CSS/StyleCart.css">
     <link href="https//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
@@ -13,158 +15,434 @@
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="info">
-                <nav>
-                    <ul id="nav1">
-                        <li><a href="">Currency</a></li>
-                        <li><a href="">English</a></li>
-                        <li><a href="">(+57)3214553580</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <ul id="nav2">
-                        <li><a href="">Username</a></li>
-                        <li><i class="fas fa-search" style="color: white;"></i></li>
-                    </ul>
-                </nav>
-            </div>
+    <style>
+        .divOculto {
+            display: none;
+        }
+        
+        .money2 {
+            display: none;
+        }
+    </style>
 
-            <div class="banner">
-                <div class="navbar">
-                    <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
-                    <nav>
-                        <ul id="menuList">
-                            <li><a href="index.html">HOME  </a><i class="fas fa-home" style="color: white;"></i></li>
-                            <li><a href="Apparel.html">APPAREL  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
-                            <li><a href="MeetUs.html">MEET US  </a><i class="far fa-question-circle" style="color: white;"></i></li>
-                            <li><a href="">FAVORITES  </a><i class="far fa-heart" style="color: white;"></i></li>
-                            <li><a href="Cart.html">CART(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
-                        </ul>
-                    </nav>
-                    <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+    <div class="headd">
+        <div class="info">
+            <nav>
+                <ul id="nav1">
+                    <li><select name="selectCurr" id="inputCurr" class="form-control" required="required">
+                        <option value=''>Currency</option>
+                        <option value="1">Dollar</option>
+                        <option value="2">Colombian Peso</option>
+                    </select></li>
+                    <li><select name="selectLang" id="inputLang" class="form-control" required="required">
+                            <option value=''>Languaje</option>
+                            <option value="1">English</option>
+                            <option value="2">Spanish</option>
+                        </select></li>
+                    <li><a href="">(+57)3214553580</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul id="nav2">
+                    <li><a href="">Username</a></li>
+                    <li><i class="fas fa-search" style="color: white;"></i></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--######################################################################################### ENGLISH ##########################################################################-->
+
+    <div class="row divOcult" id="div1">
+        <header>
+            <div class="wrapper">
+                <div class="banner">
+                    <div class="navbar">
+                        <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
+                        <nav>
+                            <ul id="menuList">
+                                <li><a href="index.html">HOME  </a><i class="fas fa-home" style="color: white;"></i></li>
+                                <li><a href="Apparel.html">APPAREL  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
+                                <li><a href="MeetUs.html">MEET US  </a><i class="far fa-question-circle" style="color: white;"></i></li>
+                                <li><a href="">FAVORITES  </a><i class="far fa-heart" style="color: white;"></i></li>
+                                <li><a href="Cart.html">CART(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
+                            </ul>
+                        </nav>
+                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div id="img"><img src="Pictures/Backgrounds/cart.jpg" alt="" width="100%"></div>
-    <!------------------------------------------------------ INFORMATION --------------------------------------------------------------------------------->
-    <div class="c">
-        <div class="content">
-            <div class="box">
+        <div id="img"><img src="Pictures/Backgrounds/cart.jpg" alt="" width="100%"></div>
 
-                <div class="cont">
-                    <div class="items">
-                        <p class="title">YOUR SELECTIONS</p>
-                        <hr>
-                        <div class="desc">
-                            <img src="ropa/Formal/CamizaBlancaRayas.jpg" class="imgc" width="100%">
-                            <div class="desc2">
-                                <p>White Striped Shirt</p><br>
-                                <small>Size: S</small><br>
-                                <input type="number" value="1" class="cant"><br>
-                                <small>Price: $22.99</small><br>
-                                <a href="" class="btn2">Remove</a>
-                            </div>
-                        </div><br>
-                        <hr>
-                        <div class="desc">
-                            <img src="ropa/Formal/BlazerCafe.jpg" class="imgc">
-                            <div class="desc2">
-                                <p>Camel Blazer</p><br>
-                                <small>Size: S</small><br>
-                                <input type="number" value="1" class="cant"><br>
-                                <small>Price: $40.99</small><br>
-                                <a href="" class="btn2">Remove</a>
-                            </div>
-                        </div><br>
-                        <hr>
-                        <div class="desc">
-                            <img src="ropa/Semi-Informal/BowlingNegra.jpg" class="imgc">
-                            <div class="desc2">
-                                <p>Black Bowling Shirt</p><br>
-                                <small>Size: M</small><br>
-                                <input type="number" value="1" class="cant"><br>
-                                <small>Price: $24.99</small><br>
-                                <a href="" class="btn2">Remove</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t">
-                        <div class="summary">
-                            <h1>Order Summary</h1>
+        <div class="c">
+            <div class="content">
+                <div class="box">
+                    <div class="cont">
+                        <div class="items">
+                            <p class="title">YOUR SELECTIONS</p>
                             <hr>
-                            <p>SubTotal: $88.97</p><br>
-                            <p>Deibery: $5.00</p><br>
-                            <p>Estimated Amount: $93.97</p>
-                            <div class="center">
-                                <button type="submit" class="btn">PAY</button>
+                            <div class="desc">
+                                <img src="ropa/Formal/CamizaBlancaRayas.jpg" class="imgc" width="100%">
+                                <div class="desc2">
+                                    <p>White Striped Shirt</p><br>
+                                    <small>Size: S</small><br>
+                                    <input type="number" value="1" class="cant"><br>
+                                    <div class="money m1">
+                                        <small>Price: $21.50</small><br>
+                                    </div>
+                                    <div class="money2 m2">
+                                        <small>Price: $77.900</small><br>
+                                    </div>
+                                    <a href="" class="btn2">Remove</a>
+                                </div>
+                            </div><br>
+                            <hr>
+                            <div class="desc">
+                                <img src="ropa/Formal/BlazerCafe.jpg" class="imgc">
+                                <div class="desc2">
+                                    <p>Camel Blazer</p><br>
+                                    <small>Size: S</small><br>
+                                    <input type="number" value="1" class="cant"><br>
+                                    <div class="money m1">
+                                        <small>Price: $40.60</small><br>
+                                    </div>
+                                    <div class="money2 m2">
+                                        <small>Price: $147.300</small><br>
+                                    </div>
+                                    <a href="" class="btn2">Remove</a>
+                                </div>
+                            </div><br>
+                            <hr>
+                            <div class="desc">
+                                <img src="ropa/Semi-Informal/BowlingNegra.jpg" class="imgc">
+                                <div class="desc2">
+                                    <p>Black Bowling Shirt</p><br>
+                                    <small>Size: M</small><br>
+                                    <input type="number" value="1" class="cant"><br>
+                                    <div class="money m1">
+                                        <small>Price: $22.99</small><br>
+                                    </div>
+                                    <div class="money2 m2">
+                                        <small>Price: $83.200</small><br>
+                                    </div>
+                                    <a href="" class="btn2">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t">
+                            <div class="summary">
+                                <h1>Order Summary</h1>
+                                <hr>
+                                <div class="money m1">
+                                    <p>SubTotal: $85.09</p><br>
+                                </div>
+                                <div class="money2 m2">
+                                    <p>SubTotal: $308.650</p><br>
+                                </div>
+
+                                <div class="money m1">
+                                    <p>Delibery: $5.00</p><br>
+                                </div>
+                                <div class="money2 m2">
+                                    <p>Delibery: $18.100</p><br>
+                                </div>
+
+                                <div class="money m1">
+                                    <p>Estimated Amount: $90.09</p>
+                                </div>
+                                <div class="money2 m2">
+                                    <p>Estimated Amount: $326.750</p>
+                                </div>
+                                <div class="center">
+                                    <button type="submit" class="btn">PAY</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <hr>
                 </div>
-                <hr>
             </div>
         </div>
-    </div>
-    <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
+        <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
 
-    <div class="social-networks">
-        <div class="s-container">
-            <h3>MEET US</h3>
-            <div class="row">
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Facebook.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Twitter.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/google.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Instagram.png">
+        <div class="social-networks">
+            <div class="s-container">
+                <h3>MEET US</h3>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Facebook.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Twitter.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/google.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Instagram.png">
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="brands">
+            <div class="s-container">
+                <div class="row">
+                    <div class="col-5">
+                        <h3>Our Payment Methods</h3>
+                        <img src="Pictures/Icons/Brands.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "130px";
+                } else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+        <script>
+            window.addEventListener('load', init, false);
+
+            function init() {
+                let div1 = document.querySelector('#without');
+                let div2 = document.querySelector('#with');
+                if (true) {
+                    div1.style.display = 'none';
+                } else {
+                    div2.style.display = 'none';
+                }
+            }
+        </script>
     </div>
-    <div class="brands">
-        <div class="s-container">
-            <div class="row">
-                <div class="col-5">
-                    <h3>Our Payment Methods</h3>
-                    <img src="Pictures/Icons/Brands.png">
+
+    <!--######################################################################################### SPANISH ##########################################################################-->
+
+    <div class="row divOculto" id="div2">
+        <header>
+            <div class="wrapper">
+
+                <div class="banner">
+                    <div class="navbar">
+                        <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
+                        <nav>
+                            <ul id="menuList2">
+                                <li><a href="index.html">MENU  </a><i class="fas fa-home" style="color: white;"></i></li>
+                                <li><a href="Apparel.html">ROPA  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
+                                <li><a href="MeetUs.html">CONOCENOS  </a><i class="far fa-question-circle" style="color: white;"></i></li>
+                                <li><a href="">FAVORITOS  </a><i class="far fa-heart" style="color: white;"></i></li>
+                                <li><a href="Cart.html">CARRITO(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
+                            </ul>
+                        </nav>
+                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu2()">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="img"><img src="Pictures/Backgrounds/cart.jpg" alt="" width="100%"></div>
+
+        <div class="c">
+            <div class="content">
+                <div class="box">
+                    <div class="cont">
+                        <div class="items">
+                            <p class="title">TUS ELECCIONES</p>
+                            <hr>
+                            <div class="desc">
+                                <img src="ropa/Formal/CamizaBlancaRayas.jpg" class="imgc" width="100%">
+                                <div class="desc2">
+                                    <p>Camisa Blanca a Rayas</p><br>
+                                    <small>Talla: S</small><br>
+                                    <input type="number" value="1" class="cant"><br>
+                                    <div class="money m1">
+                                        <small>Precio: $21.50</small><br>
+                                    </div>
+                                    <div class="money2 m2">
+                                        <small>Precio: $77.900</small><br>
+                                    </div>
+
+                                    <a href="" class="btn2">Eliminar</a>
+                                </div>
+                            </div><br>
+                            <hr>
+                            <div class="desc">
+                                <img src="ropa/Formal/BlazerCafe.jpg" class="imgc">
+                                <div class="desc2">
+                                    <p>Blazer Camel</p><br>
+                                    <small>Talla: S</small><br>
+                                    <input type="number" value="1" class="cant"><br>
+                                    <div class="money m1">
+                                        <small>Precio: $40.60</small><br>
+                                    </div>
+                                    <div class="money2 m2">
+                                        <small>Precio: $147.300</small><br>
+                                    </div>
+                                    <a href="" class="btn2">Eliminar</a>
+                                </div>
+                            </div><br>
+                            <hr>
+                            <div class="desc">
+                                <img src="ropa/Semi-Informal/BowlingNegra.jpg" class="imgc">
+                                <div class="desc2">
+                                    <p>Black Bowling Shirt</p><br>
+                                    <small>Size: M</small><br>
+                                    <input type="number" value="1" class="cant"><br>
+                                    <div class="money m1">
+                                        <small>Precio: $22.99</small><br>
+                                    </div>
+                                    <div class="money2 m2">
+                                        <small>Precio: $83.200</small><br>
+                                    </div>
+                                    <a href="" class="btn2">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t">
+                            <div class="summary">
+                                <h1>Resumen del Pedido</h1>
+                                <hr>
+                                <div class="money m1">
+                                    <p>SubTotal: $85.09</p><br>
+                                </div>
+                                <div class="money2 m2">
+                                    <p>SubTotal: $308.650</p><br>
+                                </div>
+
+                                <div class="money m1">
+                                    <p>Envio: $5.00</p><br>
+                                </div>
+                                <div class="money2 m2">
+                                    <p>Envio: $18.100</p><br>
+                                </div>
+
+                                <div class="money m1">
+                                    <p>Cobro Estimado: $90.09</p>
+                                </div>
+                                <div class="money2 m2">
+                                    <p>Cobro Estimado: $326.750</p>
+                                </div>
+                                <div class="center">
+                                    <button type="submit" class="btn">PAGAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
                 </div>
             </div>
         </div>
+        <!------------------------------------------------------ FOOTER --------------------------------------------------------------------------------->
+
+        <div class="social-networks">
+            <div class="s-container">
+                <h3>CONOCENOS</h3>
+                <div class="row">
+
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Facebook.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Twitter.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/google.png">
+                    </div>
+                    <div class="col-4">
+                        <img src="Pictures/Icons/Social-Net/Instagram.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brands">
+            <div class="s-container">
+                <div class="row">
+                    <div class="col-5">
+                        <h3>NUESTROS METODOS DE PAGO</h3>
+                        <img src="Pictures/Icons/Brands.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var menuList2 = document.getElementById("menuList2");
+            menuList2.style.maxHeight = "0px";
+
+            function togglemenu2() {
+                if (menuList2.style.maxHeight == "0px") {
+                    menuList2.style.maxHeight = "130px";
+                } else {
+                    menuList2.style.maxHeight = "0px";
+                }
+            }
+        </script>
+        <script>
+            window.addEventListener('load', init, false);
+
+            function init() {
+                let div1 = document.querySelector('#without');
+                let div2 = document.querySelector('#with');
+                if (true) {
+                    div1.style.display = 'none';
+                } else {
+                    div2.style.display = 'none';
+                }
+            }
+        </script>
     </div>
 
     <script>
-        var menuList = document.getElementById("menuList");
-        menuList.style.maxHeight = "0px";
+        $(function curr() {
 
-        function togglemenu() {
-            if (menuList.style.maxHeight == "0px") {
-                menuList.style.maxHeight = "130px";
-            } else {
-                menuList.style.maxHeight = "0px";
-            }
-        }
-    </script>
-    <script>
-        window.addEventListener('load', init, false);
+            $("#inputCurr").on('change', function() {
 
-        function init() {
-            let div1 = document.querySelector('#without');
-            let div2 = document.querySelector('#with');
-            if (true) {
-                div1.style.display = 'none';
-            } else {
-                div2.style.display = 'none';
-            }
-        }
+                var selectValue = $(this).val();
+                switch (selectValue) {
+
+                    case "1":
+                        $(".m1").show();
+                        $(".m2").hide();
+                        break;
+
+                    case "2":
+                        $(".m1").hide();
+                        $(".m2").show();
+                        break;
+                }
+
+            }).change();
+
+        });
+
+        $(function lang() {
+
+            $("#inputLang").on('change', function() {
+
+                var selectValue = $(this).val();
+                switch (selectValue) {
+
+                    case "1":
+                        $("#div1").show();
+                        $("#div2").hide();
+                        break;
+
+                    case "2":
+                        $("#div1").hide();
+                        $("#div2").show();
+                        break;
+                }
+
+            }).change();
+
+        });
     </script>
 </body>
 
