@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="CSS/StyleAppare.css">
+    <link rel="stylesheet" href="CSS/2.css">
     <link href="https//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <title>Apparel</title>
@@ -138,6 +138,40 @@
                 </div>
             </div>
         </div>
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "130px";
+                } else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+
+            $(function() {
+
+                $("#inputLang").on('change', function() {
+
+                    var selectValue = $(this).val();
+                    switch (selectValue) {
+
+                        case "1":
+                            $("#div1").show();
+                            $("#div2").hide();
+                            break;
+
+                        case "2":
+                            $("#div1").hide();
+                            $("#div2").show();
+                            break;
+                    }
+
+                }).change();
+
+            });
+        </script>
     </div>
 
     <!--######################################################################################### SPANISH ##########################################################################-->
@@ -150,7 +184,7 @@
                     <div class="navbar">
                         <a href="index.html"><img src="Pictures/Logos/WhiteTitle.png" class="logo1"></a>
                         <nav>
-                            <ul id="menuList">
+                            <ul id="menuList2">
                                 <li><a href="index.html">MENU  </a><i class="fas fa-home" style="color: white;"></i></li>
                                 <li><a href="Apparel.html">ROPA  </a><i class="fas fa-tshirt" style="color: white;"></i></li>
                                 <li><a href="MeetUs.html">CONOCENOS  </a><i class="far fa-question-circle" style="color: white;"></i></li>
@@ -158,7 +192,7 @@
                                 <li><a href="Cart.html">CARRITO(0)  </a><i class="fas fa-shopping-cart" style="color: white;"></i></li>
                             </ul>
                         </nav>
-                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
+                        <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu2()">
                     </div>
                 </div>
             </div>
@@ -232,43 +266,45 @@
                 </div>
             </div>
         </div>
+        <script>
+            var menuList2 = document.getElementById("menuList2");
+            menuList2.style.maxHeight = "0px";
+
+            function togglemenu2() {
+                if (menuList2.style.maxHeight == "0px") {
+                    menuList2.style.maxHeight = "130px";
+                } else {
+                    menuList2.style.maxHeight = "0px";
+                }
+            }
+
+            $(function() {
+
+                $("#inputLang").on('change', function() {
+
+                    var selectValue = $(this).val();
+                    switch (selectValue) {
+
+                        case "1":
+                            $("#div1").show();
+                            $("#div2").hide();
+                            break;
+
+                        case "2":
+                            $("#div1").hide();
+                            $("#div2").show();
+
+                            break;
+                    }
+
+                }).change();
+
+            });
+        </script>
     </div>
 
 
-    <script>
-        var menuList = document.getElementById("menuList");
-        menuList.style.maxHeight = "0px";
 
-        function togglemenu() {
-            if (menuList.style.maxHeight == "0px") {
-                menuList.style.maxHeight = "130px";
-            } else {
-                menuList.style.maxHeight = "0px";
-            }
-        }
-
-        $(function() {
-
-            $("#inputLang").on('change', function() {
-
-                var selectValue = $(this).val();
-                switch (selectValue) {
-
-                    case "1":
-                        $("#div1").show();
-                        $("#div2").hide();
-                        break;
-
-                    case "2":
-                        $("#div1").hide();
-                        $("#div2").show();
-                        break;
-                }
-
-            }).change();
-
-        });
-    </script>
 </body>
 
 </html>

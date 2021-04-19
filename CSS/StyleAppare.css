@@ -411,6 +411,10 @@ h3 {
         overflow: hidden;
         transition: 0.5s;
     }
+    #menuList2 {
+        overflow: hidden;
+        transition: 0.5s;
+    }
     .row-2 h2 {
         font-size: 20px;
     }
