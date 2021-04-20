@@ -99,7 +99,7 @@ nav ul li a {
     text-align: center;
     font-size: 30px;
     padding: 15px;
-    color: rgba(158, 112, 51, 0.5)
+    color: rgba(158, 112, 51, 0.5);
 }
 
 form {
@@ -164,7 +164,7 @@ input:focus~label,
 input:valid~label {
     top: -14px;
     font-size: 13px;
-    color: #ff523b;
+    color: rgba(158, 112, 51, 0.5);
 }
 
 .desc {
@@ -189,7 +189,7 @@ input:valid~label {
     width: 0%;
     bottom: 0;
     position: absolute;
-    background: linear-gradient(to right, #ffd6d1, #ff523b);
+    background: linear-gradient(to right, #ffd6d1, rgba(158, 112, 51, 0.5));
     transition: 0.3s ease width;
 }
 
