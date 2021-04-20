@@ -48,7 +48,7 @@ header {
     justify-content: space-around;
 }
 
-select {
+.form-control {
     background-color: rgb(19, 19, 19);
     color: #fff;
     border: 1px solid rgb(19, 19, 19);
@@ -153,6 +153,9 @@ nav ul li a {
     font-size: 45px;
     margin-top: 10px;
 }
+
+
+/*------------------------------------------  contenido  --------------------------------------------------------------*/
 
 
 /*------------------------------------------  contenido  --------------------------------------------------------------*/
@@ -321,10 +324,6 @@ h3 {
         z-index: 12;
         height: 140px;
     }
-    .headd {
-        z-index: 12;
-        height: 140px;
-    }
     .wrapper {
         margin: 0 auto;
     }
@@ -357,6 +356,12 @@ h3 {
 }
 
 @media only screen and (max-width:390px) {
+    .form h1 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:390px) {
     .info {
         font-size: 10px;
     }
@@ -382,10 +387,6 @@ h3 {
 
 @media only screen and (min-width:700px) {
     header {
-        z-index: 12;
-        height: 140px;
-    }
-    .headd {
         z-index: 12;
         height: 140px;
     }
@@ -461,5 +462,27 @@ h3 {
     }
     .col-5 {
         width: auto;
+    }
+    form {
+        width: 80%;
+    }
+    .cart-info {
+        font-size: 15px;
+    }
+    .cart-info p {
+        display: none;
+    }
+    td img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .related {
+        font-size: calc(1em + 1vw);
+    }
+    .related2 {
+        font-size: calc(0.8em + 0.8vw);
     }
 }

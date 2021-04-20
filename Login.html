@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Pictures/Logos/BlackO.png">
-    <link rel="stylesheet" href="CSS/StyleHom.css">
+    <link rel="stylesheet" href="CSS/StyleLogin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <title>UNREAL</title>
 </head>
@@ -26,39 +26,28 @@
             </nav>
             <img src="Pictures/Icons/MenuWhite.png" class="menu" onclick="togglemenu()">
         </div>
-        <div class="content">
-            <h2>SPRING COLLECITON</h2>
+        <div class="body-form">
+            <form action="" id="form">
+                <div class="form">
+                    <h1>Register</h1>
+                    <div class="grupo">
+                        <input type="text" name="" id="name" required><span class="barra"></span>
+                        <label for="">Full Name</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="email" name="" id="email" required><span class="barra"></span>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="grupo">
+                        <input type="password" name="" id="password" required><span class="barra"></span>
+                        <label for="">Password</label>
+                    </div>
+                    <button type="submit" class="btn">CONTINUAR</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="social-networks">
-        <div class="s-container">
-            <div class="row">
-                <h3>MEET US</h3>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Facebook.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Twitter.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/google.png">
-                </div>
-                <div class="col-4">
-                    <img src="Pictures/Icons/Social-Net/Instagram.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="brands">
-        <div class="s-container">
-            <div class="row">
-                <div class="col-5">
-                    <h3>Our Payment Methods</h3>
-                    <img src="Pictures/Icons/Brands.png">
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <script>
         var menuList = document.getElementById("menuList");
@@ -72,7 +61,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>

@@ -133,7 +133,7 @@ nav ul li a {
 }
 
 
-/*------------------------------------------  Imagen  -----------------------------------------------------------------*/
+/*---------------------------------------------------- Imagen -----------------------------------------------------------------*/
 
 .logo2 {
     width: 80px;
@@ -155,10 +155,7 @@ nav ul li a {
 }
 
 
-/*------------------------------------------  contenido  --------------------------------------------------------------*/
-
-
-/*------------------------------------------  contenido  --------------------------------------------------------------*/
+/*----------------------------------------------------- SINGLE PRODUCT ----------------------------------------------------------*/
 
 .content {
     width: 100%;
@@ -171,49 +168,101 @@ nav ul li a {
     background-color: rgb(230, 230, 230);
 }
 
-.hr1 {
+.box hr {
     width: 92%;
     height: 4px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: inline-block;
     background-color: rgb(170, 170, 170);
 }
 
-.hr2 {
-    width: 92%;
-    height: 4px;
-    margin-bottom: 25px;
-    display: inline-block;
-    background-color: rgb(170, 170, 170);
-}
-
-.row-2 {
-    display: flex;
-    margin: 1px auto 5px;
-    padding-top: 30px;
-    padding-bottom: 3px;
-}
-
-.row-2 h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(133, 133, 133);
-}
-
-select {
-    border: none;
-    padding: 4px;
-    margin-left: 20px;
-}
-
-select:focus {
-    outline: none;
-}
-
-.small-cont {
+.detail {
+    color: rgb(80, 80, 80);
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.small-img-row {
+    display: flex;
+    justify-content: start;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.detail img {
+    padding: 0;
+}
+
+.detail .col-2 {
+    padding: 20px;
+}
+
+.detail h4 {
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.detail select {
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.detail input {
+    width: 40px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid rgb(80, 80, 80);
+}
+
+input:focus {
+    outline: none;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 0px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 20px;
+    margin: 20px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #563434;
+}
+
+
+/*----------------------------------------------------- RELATED PRODUCTS ----------------------------------------------------------*/
+
+.related {
+    font-family: "marcellus_scregular", smarcellus_scregular;
+    font-size: calc(3em + 3vw);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .small-cont h2 {
@@ -222,13 +271,6 @@ select:focus {
     position: relative;
     line-height: 60px;
     color: #555;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .prod {
@@ -241,26 +283,6 @@ select:focus {
 
 .clothes {
     width: 100%
-}
-
-.page-btn {
-    margin: 0 auto 15px;
-}
-
-.page-btn span {
-    display: inline-block;
-    border: 1px solid rgb(80, 80, 80);
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-}
-
-.page-btn span:hover {
-    background: #ff523b;
-    color: #fff;
 }
 
 
@@ -356,12 +378,6 @@ h3 {
 }
 
 @media only screen and (max-width:390px) {
-    .form h1 {
-        font-size: 15px;
-    }
-}
-
-@media only screen and (max-width:390px) {
     .info {
         font-size: 10px;
     }
@@ -382,32 +398,6 @@ h3 {
 @media only screen and (max-width:250px) {
     .info {
         font-size: 6px;
-    }
-}
-
-@media only screen and (min-width:700px) {
-    header {
-        z-index: 12;
-        height: 140px;
-    }
-    .wrapper {
-        margin: 0 auto;
-    }
-    nav {
-        flex: 1;
-    }
-    .navbar ul li::after {
-        content: '';
-        height: 3px;
-        width: 0;
-        background: #ffffff;
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        transition: 0.5s;
-    }
-    .navbar ul li:hover:after {
-        width: 100%;
     }
 }
 
@@ -463,26 +453,10 @@ h3 {
     .col-5 {
         width: auto;
     }
-    form {
-        width: 80%;
-    }
-    .cart-info {
-        font-size: 15px;
-    }
-    .cart-info p {
-        display: none;
-    }
-    td img {
-        width: 100px;
-        height: 100px;
-    }
 }
 
-@media only screen and (max-width:950px) {
+@media only screen and (max-width:750px) {
     .related {
-        font-size: calc(1em + 1vw);
-    }
-    .related2 {
-        font-size: calc(0.8em + 0.8vw);
+        font-size: calc(1.3em + 1.3vw);
     }
 }
